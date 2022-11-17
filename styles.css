@@ -1,0 +1,161 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600&display=swap');
+
+:root {
+    --soft-blue: hsl(215, 51%, 70%);
+    --Cyan: hsl(178, 100%, 50%);
+    --Very-dark-blue-main: hsl(217, 54%, 11%);
+    --Very-dark-blue-card: hsl(216, 50%, 16%);
+    --soft-dark-blue-line: hsl(215, 32%, 27%);
+    --White: hsl(0, 0%, 100%);
+}
+
+* {
+    box-sizing: border-box;
+    font-family: 'Outfit', sans-serif;
+}
+
+body {
+    background-color: var(--Very-dark-blue-main);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: calc(100vh - 1px);
+}
+
+.container {
+    max-height: fit-content;
+    margin: 1rem;
+    background-color: var(--Very-dark-blue-card);
+    border-radius: 10px;
+    width: 350px;
+}
+
+.container .NFT {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 1rem;
+    overflow: hidden;
+    max-width: 100%;
+    border-radius: 10px;
+    background-color: var(--Cyan);
+}
+
+.container .NFT .NFT-image {
+    max-width: 100%;
+}
+
+.NFT .layout {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    zoom: 200%;
+    z-index: -1;
+}
+
+
+.NFT:hover .NFT-image {
+    cursor: pointer;
+    opacity: 70%;
+
+}
+
+.container .NFT:hover .layout{
+    z-index: 1;
+}
+
+.container h1 {
+    color: var(--White);
+    font-size: 2rem;
+    font-weight: 600;
+    margin: 1rem;
+}
+
+.container h1:hover {
+    color: var(--Cyan);
+    cursor: pointer;
+}
+
+.container p {
+    color: var(--soft-blue);
+    font-size: 1rem;
+    margin: 1rem;
+}
+
+.prices {
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 100%;
+    margin: 1rem;
+}
+
+.prices img {
+    margin-right: 0.3rem;
+}
+.prices .ETH {
+    display: flex;
+    align-items: center;
+    font-size: 1rem;
+    font-weight: 600;
+    color: var(--Cyan);
+}
+
+.prices .ETH::after {
+    margin-left: 0.4rem;
+    content: "ETH";
+    color: var(--Cyan);
+}
+
+.prices .time-limit {
+    display: flex;
+    align-items: center;
+    color: var(--soft-blue);
+    font-size: 1rem;
+}
+
+.line {
+    content: '';
+    height: 1px;
+    background-color: var(--soft-blue);
+    max-width: 100%;
+    margin: 1rem;
+}
+.artist {
+    display: flex;
+    align-items: center;
+    margin: 1rem;
+}
+
+.artist img {
+    height: 45px;
+    border: 2px solid var(--White);
+    border-radius: 50%;
+}
+
+.artist p {
+    color: var(--White);
+    text-transform: capitalize;
+}
+
+.artist p:hover {
+    color: var(--Cyan);
+    cursor: pointer;
+}
+
+.artist p::before {
+    font-size: smaller;
+    content: "Creation of ";
+    color: var(--soft-blue);
+}
+
+.attribution { 
+    color: var(--White);
+    margin-top: 30px;
+    font-size: 11px; text-align: center; }
+.attribution a { color: var(--Cyan); }
