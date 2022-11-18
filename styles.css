@@ -60,13 +60,13 @@ body {
 
 
 .NFT:hover .NFT-image {
-    cursor: pointer;
     opacity: 70%;
 
 }
 
 .container .NFT:hover .layout{
     z-index: 1;
+    cursor: pointer;
 }
 
 .container h1 {
